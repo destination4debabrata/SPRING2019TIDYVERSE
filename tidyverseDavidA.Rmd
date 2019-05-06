@@ -91,3 +91,50 @@ In this section, I am using ggplot to create a basic scatterplot as it is one of
 ggplot(avg.rent.byzip, aes(x=Zip_Code, y=AvgRent)) + geom_point()
 ggplot(avg.rent.bystate, aes(x=avg.rent.bystate$State_Name,y=AvgRent)) + geom_point() + theme(axis.text.x = element_text(angle = 90)) + xlab("State Name") + ylab("Average Rent")
 ```
+
+***
+
+#Addition by Debabrata Kabiraj
+
+---
+author: "Debabrata Kabiraj"
+date: "5/4/2019"
+---
+
+## Original
+
+Show the original data format
+
+```{r}
+head(sub.rent.data,10)
+sample(head(sub.rent.data,20),10)
+#DT::datatable(sub.rent.data, options = list(pagelength=5))
+
+ggplot(sub.rent.data, aes(x=sub.rent.data$State_Name, y=sub.rent.data$Median, color = sub.rent.data$Type)) +
+    geom_point(alpha = 0.2) +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+## Nest 
+
+Using the `nest` function from tidyr package to group the rents by state, county and city to form a tibble, a list, column
+
+```{r message=TRUE, comment= FALSE, warning=FALSE}
+sub.rent.data.nested <- sub.rent.data %>% 
+                          tidyr::nest(-c(State_Name, State_ab, County, City)) 
+head(sub.rent.data.nested,10)
+DT::datatable(sub.rent.data.nested, options = list(pagelength=5))
+```
+
+## Unnest
+
+Using the `unnest` function from tidyr to ungroup the tibble, a list column, rents back to original form state, county and city
+
+```{r}
+sub.rent.data.unnested <- sub.rent.data.nested %>%
+                            tidyr::unnest(data)
+head(sub.rent.data.unnested,10)
+DT::datatable(sub.rent.data.unnested, options = list(pagelength=5))
+```
+
+***

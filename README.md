@@ -23,6 +23,7 @@ In this assignment, you’ll practice collaborating around a code project with G
 ### Ryan Gordon - mutate_all(), mutate_if(), mutate_at(), http://rpubs.com/rg563/TidyVerse_mutate
 ### Jimmy Ng - case_when, https://github.com/acatlin/SPRING2019TIDYVERSE/blob/master/tidyverse_recipe_case_when_JN.Rmd
 ### David Apolinar: Part 1 group_by, arrange, summarise, https://github.com/dapolloxp/SPRING2019TIDYVERSE-1/blob/master/tidyverseDavidA.Rmd
+### Debabrata Kabiraj : Added colored graph and included Nest() and Unnest() examples for the give data  http://rpubs.com/destination4debabrata/493474
 ### Part 2: https://github.com/dapolloxp/SPRING2019TIDYVERSE-1/blob/master/perez_tidyverse_lubridate.Rmd
 ## ggplot2
 
@@ -70,3 +71,4 @@ I decided to do my tidyverse assignment on the tibbles package. The rmarkdown co
 
 ### Isabel R.
 I will focus on how to use the `Nest` and `Unnest` functions utilizing data from *FiveThirtyEight*,"How Popular Is Donald Trump?" from the trump-approval-ratings data set. The rmarkdown code has been posted to this repository and the html file can be found here: http://rpubs.com/IsabelR/TidyVerseAssignment
+
