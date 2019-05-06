@@ -47,6 +47,7 @@ library(multidplyr)
 - lubridate
 - DT
 - kableExtra
+
 ------
 
 ```{r include=FALSE}
@@ -333,4 +334,4 @@ Note that because of transmission time as data is sent to and from the nodes and
 
 With help of tidyverse package, we were able to demonstrate the five main steps in the multidplyr workflow on a real world example of collecting historical stock prices for a large set of stocks. The beauty is that the packages and workflow can be applied to anything from collecting stocks to applying many models to computing n-grams on textual data and more!
 
-For a computation that takes 3 minutes under normal conditions, we improved the processing speed by over 5X to 40 secs through parallel processing!!!
+For a computation that takes close to 3 minutes under normal conditions, we improved the processing speed by over 4X to 40 secs through parallel processing!!!
