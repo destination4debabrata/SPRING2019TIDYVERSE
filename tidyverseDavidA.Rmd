@@ -137,4 +137,34 @@ head(sub.rent.data.unnested,10)
 DT::datatable(sub.rent.data.unnested, options = list(pagelength=5))
 ```
 
+## Benchmarking Parallel Processing
+```{r, eval=TRUE, include=FALSE, echo=FALSE}
+library(tidyverse)
+library(multidplyr)
+library(microbenchmark)
+library(parallel)
+```
+
+```{r, eval=TRUE, include=TRUE, echo=TRUE, message=FALSE, comment= FALSE, warning=FALSE}
+cluster <- create_cluster(cores = detectCores())
+
+slow_func <- function(df) {
+  slow <- df %>%
+            group_by(State_Name, County, City) %>%
+            filter(dplyr::n_distinct(Place) > 1)
+}
+
+fast_func <- function(df) {
+  fast <- df %>%
+            partition(State_Name, County, City, cluster = cluster) %>%
+            group_by(State_Name, County, City) %>%
+            filter(dplyr::n_distinct(Place) > 1) %>%
+            collect()
+}
+
+microbenchmark(slow_func(sub.rent.data), fast_func(sub.rent.data))
+```
+
+As can be seen above, implementing parallel processing on the high volume data we could achieve 50% better performance from underpowered client-side processing. We will see significant performance improvement f we choose server-side processing with high CPU cores and memory at our disposable.
+
 ***

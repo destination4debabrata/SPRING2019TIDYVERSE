@@ -313,7 +313,7 @@ sp_500_processed_in_parallelize <- sp_500_processed_in_parallel %>% tidyr::unnes
 DT::datatable(sp_500_processed_in_parallelize, options = list(pagelength=5))
 ```
 
-The processing time is approximately 0.38 minutes, which is 5X faster!
+The processing time is approximately 0.38 minutes, which is 4X faster!
 
 ## Conclusion 
 
