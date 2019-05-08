@@ -23,7 +23,8 @@ In this assignment, you’ll practice collaborating around a code project with G
 ### Ryan Gordon - mutate_all(), mutate_if(), mutate_at(), http://rpubs.com/rg563/TidyVerse_mutate
 ### Jimmy Ng - case_when, https://github.com/acatlin/SPRING2019TIDYVERSE/blob/master/tidyverse_recipe_case_when_JN.Rmd
 ### David Apolinar: Part 1 group_by, arrange, summarise, https://github.com/dapolloxp/SPRING2019TIDYVERSE-1/blob/master/tidyverseDavidA.Rmd
-### Debabrata Kabiraj : **Extend an Existing Example** Added colored graph and included Nest() and Unnest() examples for the give data https://github.com/destination4debabrata/SPRING2019TIDYVERSE/blob/master/tidyverseDavidA.Rmd -> http://rpubs.com/destination4debabrata/493474
+### Debabrata Kabiraj : **Extend an Existing Example** Added colored graph and included Nest() and Unnest() examples for the give data along-with example of parallel processing using multidplyr with tidyverse
+                        https://github.com/destination4debabrata/SPRING2019TIDYVERSE/blob/master/tidyverseDavidA.Rmd -> http://rpubs.com/destination4debabrata/494229
 ### Part 2: https://github.com/dapolloxp/SPRING2019TIDYVERSE-1/blob/master/perez_tidyverse_lubridate.Rmd
 ## ggplot2
 
